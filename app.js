@@ -3,7 +3,7 @@ var app = angular.module('jycionario', [])
     return function(input) {
       translatedInput = input;
 
-      var pattern = /\b\w*(de\sment|de\smi|de\sm|de\sv|di|dí|die|de\sn|dmi|gin|gí|dinhos|dinho|jinhos|jinho|inho|ti)\w*\b/gi;
+      var pattern = /\b\w*(de\sment|de\smi|de\sm|de\sv|di|dí|die|de\sn|dmi|gin|gí|dinhos|dinho|jinhos|inho|ti|jinh)\w*\b/gi;
       translatedInput = translatedInput.replace(pattern, function replacer(match) {
         var original = match;
         match = match.replace(/de ment/i, "Jimmynt");
@@ -23,14 +23,15 @@ var app = angular.module('jycionario', [])
         match = match.replace(/dinhos/i, "Jimnhos");
         match = match.replace(/dinho/i, "Jimm");
         match = match.replace(/jinhos/i, "Jimnhos");
-        match = match.replace(/jinho/i, "Jimm");
+
         match = match.replace(/inho/i, "imm");
         match = match.replace(/ti/i, "tchy");
+        match = match.replace(/jinh/i, "Jimnh");
         // console.log('Matched in any place of word', pattern, 'Original: ' + original, 'Changed: ' + match);
         return match;
       });
 
-      var pattern = /\b\w*(de|gem|ge|id|dy|idge|dge|te|ti|tes)\b/gi;
+      var pattern = /\b\w*(de|gem|ge|id|dy|idge|dge|te|ti|tes|jinho)\b/gi;
       translatedInput = translatedInput.replace(pattern, function replacer(match) {
         var original = match;
         match = match.replace(/idge/i, "idJy");
@@ -50,6 +51,7 @@ var app = angular.module('jycionario', [])
         else {
           match = 'testchy';
         }
+        match = match.replace(/jinho/i, "Jimm");
         // console.log('Matched at end of word', pattern, original, match);
         return match;
       });

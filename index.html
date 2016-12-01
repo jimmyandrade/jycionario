@@ -1,0 +1,13 @@
+<html ng-app="jycionario">
+<head>
+  <meta charset="utf-8" />
+  <title>JYCION&Aacute;RIO</title>
+  <link href="./app.css" rel="stylesheet" />
+</head>
+<body ng-controller="MainController">
+  <textarea id="original" autofocus="autofocus" ng-model="text" placeholder="Digite qualquer texto aqui">{{ text }}</textarea>
+  <textarea id="translated" readonly="readonly" title="Clique ou toque aqui para copiar o texto traduzido">{{ text | translate }}</textarea>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+<script src="./app.js"></script>
+</html>

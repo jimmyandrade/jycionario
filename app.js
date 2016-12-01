@@ -3,12 +3,13 @@ var app = angular.module('jycionario', [])
     return function(input) {
       translatedInput = input;
 
-      var pattern = /\b\w*(de\sment|de\smi|de\sm|de\sv|di|dí|die|dmi|gin|gí|dinhos|dinho|jinhos|jinho|inho|ti)\w*\b/gi;
+      var pattern = /\b\w*(de\sment|de\smi|de\sm|de\sv|di|dí|die|de\sn|dmi|gin|gí|dinhos|dinho|jinhos|jinho|inho|ti)\w*\b/gi;
       translatedInput = translatedInput.replace(pattern, function replacer(match) {
         var original = match;
         match = match.replace(/de ment/i, "Jimmynt");
         match = match.replace(/de mi/i, "Jimmy");
         match = match.replace(/de m/i, "Jimm");
+        match = match.replace(/de n/i, "Jimn");
         match = match.replace(/de v/i, "Jyv");
         match = match.replace(/die/i, "dJye");
         match = match.replace(/di/i, "Jy");

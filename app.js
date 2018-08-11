@@ -19,6 +19,7 @@ var app = angular.module('jycionario', [])
         match = match.replace(/sex/i, "sécquiss");
         match = match.replace(/sens/i, "çenç");
         match = match.replace(/gen/i, "zen");
+        match = match.replace(/ob/i, "b");
         // console.log('Matched at begin of word', pattern, original, match);
         return match;
       });
@@ -83,6 +84,7 @@ var app = angular.module('jycionario', [])
           match = 'testchy';
         }
         match = match.replace(/jinho/i, "Jimm");
+        match = match.replace(/dinho/i, "Jimm");
         match = match.replace(/lho/i, "y");
         match = match.replace(/me/i, "mmy");
         match = match.replace(/que/i, "quy");

@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": false,
+  "enabled": true,
+  "labels": ["dependencies", "renovate"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": false
+    },
+    {
+      "packagePatterns": ["eslint"],
+      "labels": ["linting"]
+    }
+  ],
+  "semanticCommits": true,
+  "unicodeEmoji": true,
+  "updateLockFiles": true
+}
